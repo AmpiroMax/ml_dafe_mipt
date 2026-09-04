@@ -14,7 +14,8 @@
 
 | Файл | Что это |
 |:--|:--|
-| `lecture_01.pptx` | Слайды вводной лекции |
+| `lecture_01.pdf` | Слайды вводной лекции |
+| `lecture_01.pptx` | Они же в редактируемом виде |
 | `seminar_01.ipynb` | Семинарский ноутбук, идем по нему вместе |
 | `seminar_01_solved.ipynb` | Решенная версия, выкладывается вечером |
 | `lab_01.ipynb` | Лабораторная: пять задач и два бонуса |
@@ -51,5 +52,8 @@
 
 ## Слайды
 
-Слайды лекции лежат здесь же: [lecture_01.pptx](lecture_01.pptx).
+Слайды лекции лежат здесь же: [lecture_01.pdf](lecture_01.pdf),
+ссылки внутри кликабельны. Тот же файл в формате PowerPoint —
+[lecture_01.pptx](lecture_01.pptx).
+
 Дополнительно по теме kNN и наивного Байеса — [слайды girafe-ai](https://github.com/girafe-ai/ml-course/blob/master/week0_01_naive_bayes/lect001_intro_knn_naive_bayes.pdf).

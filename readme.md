@@ -94,6 +94,60 @@ Python 3.11 или новее, менеджер окружений miniconda. З
 
 Опыт в машинном обучении не нужен, курс начинается с нуля.
 
+## Дополнительные материалы
+
+Лекции, которые стоит посмотреть, и курсы, которые стоит пройти,
+если хочется разбираться всерьез.
+
+**К занятиям.** Основная серия — [«Тренировки по ML»](https://youtu.be/k3UJOG-DKHE)
+Яндекса и [Лекторий ФПМИ](https://www.youtube.com/watch?v=8s9073kNXgY&list=PL4_hYwCyhAvZyW6qS58x4uElZgAkMVUvj).
+Что смотреть к какому занятию — в [lectures.md](docs/lectures.md).
+
+**Математика.**
+[Теория вероятностей, Райгородский, МФТИ](https://www.youtube.com/playlist?list=PLthfp5exSWEqYroMZVPIOPd5Dz3ARAXzN) ·
+[Основы статистики, Карпов](https://stepik.org/course/76) ·
+[Математика для анализа данных](https://education.yandex.ru/handbook/math) ·
+[Байесовские методы, Ветров](https://www.youtube.com/playlist?list=PLEqoHzpnmTfCiJpMPccTWXD9DB4ERQkyw)
+
+**Машинное обучение.**
+[Учебник ШАД](https://education.yandex.ru/handbook/ml) ·
+[Курс Соколова, ВШЭ](https://github.com/esokolov/ml-course-hse) ·
+[Stanford CS229](https://cs229.stanford.edu/) ·
+[Statistical Rethinking](https://www.youtube.com/playlist?list=PLDcUM9US4XdNOlqSyhe38US8mFgmqzI14)
+
+**Нейросети и зрение.**
+[Deep Learning School, МФТИ](https://dls.samcs.ru) ·
+[Deep learning на пальцах](https://dlcourse.ai/) ·
+[Stanford CS231n](https://cs231n.stanford.edu/) ·
+[Zero to Hero, Karpathy](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)
+
+**Язык, звук, мультимодальность.**
+[NLP Course For You, Войта](https://lena-voita.github.io/nlp_course.html) ·
+[Speech course, ШАД](https://github.com/yandexdataschool/speech_course) ·
+[Трек Speech, DLS МФТИ](https://www.youtube.com/playlist?list=PL0Ks75aof3TgnQ_q1AmIClOeX6c-F_Kw0) ·
+[CMU 11-777, Multimodal](https://www.youtube.com/playlist?list=PLdGKJ8Bg_69xRZspmMOMmHDAf1nendPtA)
+
+**Инженерия и MLOps.**
+[MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp) ·
+[Made With ML](https://madewithml.com/courses/mlops/) ·
+[CS329S, ML Systems](https://stanford-cs329s.github.io/)
+
+**Инструменты.**
+[PyTorch](https://pytorch.org/) ·
+[Hugging Face](https://huggingface.co/) ·
+[scikit-learn](https://scikit-learn.org/) ·
+[Weights & Biases](https://wandb.ai/site) ·
+[arXiv](https://arxiv.org/list/cs.LG/recent) ·
+[Papers with Code](https://paperswithcode.com/)
+
+**Запустить модель у себя.**
+[Ollama](https://ollama.com/) ·
+[LM Studio](https://lmstudio.ai/) ·
+[llama.cpp](https://github.com/ggml-org/llama.cpp)
+
+Полный список с описаниями — в [resources.md](docs/resources.md),
+восемьдесят проверенных ссылок.
+
 ## На чем основан курс
 
 - [girafe-ai/ml-course](https://github.com/girafe-ai/ml-course), Радослав Нейчев и Владислав Гончаренко
