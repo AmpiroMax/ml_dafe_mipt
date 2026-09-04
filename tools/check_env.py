@@ -1,6 +1,10 @@
 """Проверка, что окружение курса собрано правильно.
 
     python tools/check_env.py
+
+Скрипт никогда не падает сам: любая беда с пакетом превращается в понятную
+строчку отчета, а не в трассировку. Если он упал — это ошибка в самом
+скрипте, напишите мне.
 """
 
 from __future__ import annotations
@@ -17,13 +21,34 @@ CORE = [
 ]
 LATER = ["seaborn", "catboost", "lightgbm", "optuna", "datasketch"]
 
+#: Подсказки для известных поломок, которые не лечатся переустановкой пакета.
+HINTS = {
+    "libomp": (
+        "нужна библиотека OpenMP. На macOS: brew install libomp, "
+        "либо conda install -c conda-forge libomp"
+    ),
+    "GLIBCXX": "не хватает системных библиотек C++: conda install -c conda-forge libstdcxx-ng",
+}
 
-def version_of(name: str) -> str | None:
+
+def probe(name: str) -> tuple[str | None, str | None]:
+    """Вернуть версию пакета и текст проблемы, если она есть.
+
+    Пакет может не установиться, а может установиться и не импортироваться:
+    у lightgbm и catboost на macOS так бывает из-за отсутствия OpenMP.
+    Второй случай важно отличать от первого, потому что и лечится он иначе.
+    """
     try:
         module = __import__(name)
     except ImportError:
-        return None
-    return getattr(module, "__version__", "?")
+        return None, None
+    except Exception as exc:                     # noqa: BLE001
+        text = str(exc)
+        for marker, hint in HINTS.items():
+            if marker in text:
+                return None, hint
+        return None, f"{type(exc).__name__}: {text.splitlines()[0][:110]}"
+    return getattr(module, "__version__", "?"), None
 
 
 def as_tuple(v: str) -> tuple:
@@ -42,25 +67,41 @@ def main() -> int:
     problems = 0
     print("\nобязательные пакеты:")
     for name, minimum in CORE:
-        got = version_of(name)
-        if got is None:
-            print(f"  MISSING  {name}  (нужен >= {minimum})")
+        got, trouble = probe(name)
+        if trouble:
+            print(f"  СЛОМАН   {name}: {trouble}")
+            problems += 1
+        elif got is None:
+            print(f"  НЕТ      {name}  (нужен >= {minimum})")
             problems += 1
         elif got != "?" and as_tuple(got) < as_tuple(minimum):
-            print(f"  OLD      {name} {got}  (нужен >= {minimum})")
+            print(f"  СТАРЫЙ   {name} {got}  (нужен >= {minimum})")
             problems += 1
         else:
             print(f"  ok       {name} {got}")
 
+    broken_later = 0
     print("\nпонадобятся позже по курсу:")
     for name in LATER:
-        got = version_of(name)
-        print(f"  {'ok      ' if got else 'нет пока'} {name} {got or ''}".rstrip())
+        got, trouble = probe(name)
+        if trouble:
+            print(f"  сломан   {name}: {trouble}")
+            broken_later += 1
+        elif got is None:
+            print(f"  нет пока {name}")
+        else:
+            print(f"  ok       {name} {got}")
 
+    print()
     if problems:
-        print(f"\n{problems} проблем(ы). Установка: pip install -r requirements.txt")
+        print(f"Проблем с обязательными пакетами: {problems}.")
+        print("Установка: pip install -r requirements.txt")
         return 1
-    print("\nОкружение готово.")
+
+    print("Обязательное окружение готово, можно работать.")
+    if broken_later:
+        print(f"Отложенных пакетов сломано: {broken_later}. "
+              "Это не мешает первым занятиям, почините до нужной недели.")
     return 0
 
 
