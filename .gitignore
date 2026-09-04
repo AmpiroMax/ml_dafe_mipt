@@ -1,0 +1,21 @@
+# данные домашних работ качаются скриптом, в репозитории их нет
+homeworks/*/data/
+
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+.DS_Store
+.idea/
+.vscode/
+catboost_info/
+lightning_logs/
+mlruns/
+wandb/
+*.ckpt
+*.pt
+
+# решенные версии выкладываются после занятия, отдельным коммитом
+classes/**/*_solved.ipynb
