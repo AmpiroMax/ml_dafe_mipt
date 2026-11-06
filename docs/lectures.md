@@ -21,17 +21,17 @@
 | 5 | Cross validation. BVD | 4 | [-taRv4WTUbo](https://www.youtube.com/watch?v=-taRv4WTUbo&list=PL4_hYwCyhAvZyW6qS58x4uElZgAkMVUvj) |
 | 6 | Decision trees and Ensembles | 8 | [-0Do2_WIJAQ](https://www.youtube.com/watch?v=-0Do2_WIJAQ&list=PL4_hYwCyhAvZyW6qS58x4uElZgAkMVUvj) |
 | 7 | Gradient boosting | 9 | [hTECDpL_JYM](https://www.youtube.com/watch?v=hTECDpL_JYM&list=PL4_hYwCyhAvZyW6qS58x4uElZgAkMVUvj) |
-| 8 | Intro to Deep Learning | по желанию | [wgWfAMhw5ik](https://www.youtube.com/watch?v=wgWfAMhw5ik&list=PL4_hYwCyhAvZyW6qS58x4uElZgAkMVUvj) |
-| 9 | Optimization and regularization in Deep Learning | по желанию | [XWAvufvzk2M](https://www.youtube.com/watch?v=XWAvufvzk2M&list=PL4_hYwCyhAvZyW6qS58x4uElZgAkMVUvj) |
+| 8 | Intro to Deep Learning | 10 | [wgWfAMhw5ik](https://www.youtube.com/watch?v=wgWfAMhw5ik&list=PL4_hYwCyhAvZyW6qS58x4uElZgAkMVUvj) |
+| 9 | Optimization and regularization in Deep Learning | 12 | [XWAvufvzk2M](https://www.youtube.com/watch?v=XWAvufvzk2M&list=PL4_hYwCyhAvZyW6qS58x4uElZgAkMVUvj) |
 | 10 | Recurrent Neural Networks and Language Models | по желанию | [TkFBozjO72Y](https://www.youtube.com/watch?v=TkFBozjO72Y&list=PL4_hYwCyhAvZyW6qS58x4uElZgAkMVUvj) |
-| 11 | Convolutional neural networks | по желанию | [6_vFNBwfK28](https://www.youtube.com/watch?v=6_vFNBwfK28&list=PL4_hYwCyhAvZyW6qS58x4uElZgAkMVUvj) |
+| 11 | Convolutional neural networks | 13 | [6_vFNBwfK28](https://www.youtube.com/watch?v=6_vFNBwfK28&list=PL4_hYwCyhAvZyW6qS58x4uElZgAkMVUvj) |
 
-Глубокое обучение в этом семестре не разбирается; лекции 8–11 оставлены
-для тех, кому интересно посмотреть самостоятельно.
+Занятия 10–13 — введение в нейронные сети. Лекция 10 про рекуррентные сети
+оставлена для тех, кому интересно посмотреть самостоятельно; к занятию 11
+про PyTorch видео нет.
 
-Занятия 11–14 про устройство ML-проекта идут без видео: к ним
-в репозитории будет короткий текст, ссылка появится в расписании
-перед занятием.
+Занятие 14 про устройство ML-проекта идет без видео: к нему в репозитории
+будет короткий текст, ссылка появится в расписании перед занятием.
 
 ## Дополнительная серия
 
